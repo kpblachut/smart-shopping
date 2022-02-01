@@ -1,0 +1,56 @@
+create recipe_list_tile widget
+create add_recipe function 
+	create add_or_edit_recipe windows
+create dbs
+	*** dbs based on json files ***
+	ingridients json:
+		[
+			{
+				id: 1,
+				name: 'tomato',
+				category: 'vegetables',
+				--- future/optional ---
+				packings: ['200g', '500g', 'unlimited'],
+				shops: ['lidl', 'biedronka'],
+				expiration_date: 2tyg,
+			}
+		]
+	recipes_json:
+		[
+			{
+				id: 1,
+				name: 'tomato salad',
+				ingridients: [
+					{
+						id: 1,
+						quantity: 200g
+					},
+					{
+						id: 2,
+						quantity: 150g
+					}
+				],
+				portions: 4,
+				--- future/optional ---
+				steps: [
+					{
+						id: 1,
+						description: "Chop up the tomatos"
+					},
+					{
+						id: 2,
+						description: "Mix tomatos with salad"
+					}
+				]
+			}
+		]
+
+	shopping_list: [
+		{
+			id: 1,
+			title: 'Monday list',
+			ingridients : [
+				
+			]
+		}
+	]
